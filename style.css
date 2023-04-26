@@ -118,3 +118,58 @@ button {
 button:hover {
   background-color: #3498db;
 }
+
+/* Testing out new feature below */
+/* Styles for the button that replaces navbar links on smaller screens */
+.menu-toggle {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+  /* Hide the navbar links */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show the menu toggle button */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Style the menu toggle button */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    margin: 5px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+}
+
+/* Styles for the drop-down menu */
+.dropdown {
+  display: none;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* Show the drop-down menu when the menu toggle button is clicked */
+.menu-toggle:focus + .dropdown {
+  display: block;
+}

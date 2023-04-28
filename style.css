@@ -19,6 +19,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1;
+  justify-content: flex-end;
 }
 
 .logo img {
@@ -133,20 +134,22 @@ button:hover {
   }
 
   /* Show the menu toggle button */
-  .menu-toggle {
+  /* .menu-toggle {
     display: block;
-  }
+  } */
 
   /* Style the menu toggle button */
   .menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    margin: 5px;
+    height: 60px;
+    /* margin: 5px; */
     cursor: pointer;
+    /* width: calc(30px - 20px); */
     margin-left: auto;
+    margin-right: 30px;
+    background-color: #34495e;
   }
 
   .menu-toggle .bar {
@@ -167,9 +170,25 @@ button:hover {
   background-color: #f1f1f1;
   border: 1px solid black;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Show the drop-down menu when the menu toggle button is clicked */
 .menu-toggle:focus + .dropdown {
   display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  z-index: 2;
+}
+
+.menu-toggle:hover {
+  background-color: #34495e;
+}
+
+.hamburger-button {
+  height: 40px;
+  width: 40px;
+  filter: invert(100%);
 }

@@ -13,8 +13,8 @@ const answerText = document.querySelector(".answer-text");
 const checkAnsBtn = document.querySelector(".check-ans-btn");
 const undoBtn = document.querySelector(".undo-btn");
 
-// // Handling of Excel file with SheetJS
-// // Load the Excel file using SheetJS
+// Handling of Excel file with SheetJS
+// Load the Excel file using SheetJS
 // const hanziList6000 = XLSX.readFile("hanzi6000.xlsx");
 
 // // Get the first worksheet

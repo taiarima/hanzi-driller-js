@@ -45,10 +45,22 @@
         <button class="undo-btn">Undo</button>
       </div>
     </div>
-    <div id="myModal" class="modal">
+    <div id="modal-window" class="modal-window modal-choose-list">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Modal content goes here.</p>
+        <span class="close-modal-btn">&times;</span>
+        <div class="choose-list-text">
+          <h1>Create a New Study List</h1>
+          <label for="list-name"
+            >Enter your name:
+            <input id="list-name" type="text" placeholder="e.g., John"
+          /></label>
+          <label
+            >Select a range: <input width="5" type="number" min="1" /> to
+            <input type="number" min="50" max="6000" />
+          </label>
+          <!-- TODO: Add advanced settings later -->
+          <button class="submit-list-btn">Create Study list</button>
+        </div>
       </div>
     </div>
   </body>

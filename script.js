@@ -13,15 +13,14 @@ const answerText = document.querySelector(".answer-text");
 const checkAnsBtn = document.querySelector(".check-ans-btn");
 const undoBtn = document.querySelector(".undo-btn");
 
-// Handling of Excel file with SheetJS
-// Load the Excel file using SheetJS
-// const hanziList6000 = XLSX.readFile("hanzi6000.xlsx");
-
-// // Get the first worksheet
-// const hanziList6000Sheet = workbook.Sheets[workbook.SheetNames[0]];
-
-// // Extract data from the worksheet
-// const data = XLSX.utils.sheet_to_json(worksheet);
+// Plan
+// 1. Have users choose whether they want simplified or traditional
+// 2. Have users choose the range of Hanzi they want, e.g. 1-1000, also if they want to be tested on pronunciation, meaning, or both
+// 3. Make them the stack of objects
+// --> last seen, date correct, score, total views need to be added, rest can be parsed from JSON
+// 4. Settings
+// --> Same as HanziDriller in Swing
+// 5. Build behavior for reviewing
 
 // Experimenting with answer checking
 const hanziReading = "han4";
@@ -51,3 +50,32 @@ const nextBtn = document.querySelector(".button-container button:last-of-type");
 nextBtn.addEventListener("click", function () {
   // empty function for now
 });
+
+
+
+// Coding Modal window
+// Get the modal
+const modal = document.getElementById("myModal");
+
+// Get the link that opens the modal
+const link = document.querySelector(".choose-list-link");
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the link, open the modal
+link.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};

@@ -12,6 +12,10 @@ const hanziPrompt = document.querySelector(".hanzi-prompt");
 const answerText = document.querySelector(".answer-text");
 const checkAnsBtn = document.querySelector(".check-ans-btn");
 const undoBtn = document.querySelector(".undo-btn");
+const submitListBtn = document.querySelector(".submit-list-btn");
+const listLowerRange = document.querySelector(".lower-range");
+const listUpperRange = document.querySelector(".upper-range");
+const listUserName = document.getElementById(".list-name");
 
 // Plan
 // 1. Have users choose whether they want simplified or traditional
@@ -73,4 +77,8 @@ window.onclick = function (event) {
   if (event.target == modalWindow) {
     modalWindow.style.display = "none";
   }
+};
+
+submitListBtn.onclick = function () {
+  // take values
 };

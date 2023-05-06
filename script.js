@@ -57,25 +57,36 @@ nextBtn.addEventListener("click", function () {
 
 // Coding Modal window
 // Get the modal
-const modalWindow = document.getElementById("modal-window");
+const modalChooseList = document.querySelector(".modal-choose-list");
+const modalSettings = document.querySelector(".modal-settings");
 
 // Get the <span> element that closes the modal
-const closeModalBtn = document.querySelector(".close-modal-btn");
+const closeListModal = document.querySelector(".close-list-modal");
+const closeSettingsModal = document.querySelector(".close-settings-btn");
 
 // When the user clicks the link, open the modal
 chooseListLink.onclick = function () {
-  modalWindow.style.display = "block";
+  modalChooseList.style.display = "block";
+};
+
+settingsLink.onclick = function () {
+  modalSettings.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
-closeModalBtn.onclick = function () {
-  modalWindow.style.display = "none";
+closeListModal.onclick = function () {
+  modalChooseList.style.display = "none";
+};
+
+closeSettingsModal.onclick = function () {
+  modalSettings.style.display = "none";
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modalWindow) {
-    modalWindow.style.display = "none";
+  if (event.target == modalChooseList || event.target == modalSettings) {
+    modalChooseList.style.display = "none";
+    modalSettings.style.display = "none";
   }
 };
 

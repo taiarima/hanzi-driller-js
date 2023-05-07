@@ -32,45 +32,109 @@
         <a class="dropdown-item" href="#">Help</a>
       </div>
     </nav>
+    <main>
+      <div class="intro-text">
+        <h1 class="intro-title">Welcome to Hanzi Driller</h1>
+        <p>Available in both Simplified and Traditional Characters!</p>
+        <div class="intro-paragraph">
+          <h2>What is it?</h2>
+          <p>
+            Hanzi Driller is an application designed to train a Pavlovian
+            response such that when you see a Chinese character, you instantly
+            know how it's pronounced. To achieve this, you will be shown
+            characters, and be prompted to type in the character's pronunciation
+            and/or meaning. You can choose whether you want to drill only
+            meanings, only pronunciations, or both. The goal is for you to go as
+            quickly as possibly, and do multiple repetitions with each character
+            until your response comes naturally, without thinking. Once you've
+            selected your list, the application does all the work for you. All
+            you have to do is type your responses, and the details are handled
+            in the background.
+          </p>
+          <h2>How does it work?</h2>
+          <p>
+            You start by creating a list of characters to study with. Characters
+            are numbered 1 to 6000, representing the 6,000 most common Chinese
+            characters, in order of frequency. For example, if you want to drill
+            the 500 most common characters, define your list as 1 to 500. The
+            characters will be presented to you with the easiest (i.e., most
+            common) characters first, and increase in difficulty as you master
+            more characters. More advanced students should define their list
+            with a higher starting point (e.g., 2000 to 3000). Your study list
+            can be as large or as small as you want.
+          </p>
+          <p>
+            There is a built-in algorithm which will make sure that you will
+            continue to learn new characters at a good rate, without letting you
+            forget characters you have already learned or wasting time on
+            characters you already know. All settings can be adjusted and
+            fine-tuned for those who would like to customize their study
+            experience.
+          </p>
+          <h2>Who is it for?</h2>
+          <p>
+            While Hanzi Driller is appropriate for any student of Mandarin
+            Chinese, it is most suitable for intermediate and advanced learners.
+            As an intermediate or advanced student of Chinese, you have often
+            gained plenty of experience reading and mastered many Chinese
+            characters, but you may find you often forget the pronunciation of
+            certain characters which are less common. This application is
+            designed to quickly identify the characters you struggle with and
+            drill them until they are hard-wired in your memory. It is also a
+            great tool for advanced students of Chinese who have a firm grasp of
+            all the general use hanzi, but would like to expand their knowledge
+            to less commonly used characters.
+          </p>
+          <p>
+            Hanzi Driller is intended to be a supplement for your Chinese study
+            regimen -- not a replacement for it. While this application will
+            help you cement difficult and elusive Chinese character
+            pronunciations in your memory, it is no replacement for a
+            well-balanced study program based on reading and listening to
+            comprehensible input.
+          </p>
+        </div>
+      </div>
 
-    <div class="app-container">
-      <textarea class="hanzi-prompt" readonly>汉</textarea>
-      <input
-        class="answer-text"
-        type="text"
-        placeholder="Enter the pronunciation including tone (e.g., han4)"
-      />
-      <div class="button-container">
-        <button class="check-ans-btn">Check Answer</button>
-        <button class="undo-btn">Undo</button>
-      </div>
-    </div>
-    <div class="modal-window modal-choose-list">
-      <div class="modal-content">
-        <span class="close-modal-btn close-list-modal">&times;</span>
-        <div class="choose-list-text">
-          <h1>Create a New Study List</h1>
-          <label for="list-name"
-            >Enter your name: <input id="list-name" type="text"
-          /></label>
-          <label
-            >Select a range:
-            <input class="lower-range" width="5" type="number" min="1" /> to
-            <input class="upper-range" type="number" min="50" max="6000" />
-          </label>
-          <!-- TODO: Add advanced settings later -->
-          <button class="submit-list-btn">Create Study list</button>
+      <div class="app-container hidden">
+        <textarea class="hanzi-prompt" readonly>汉</textarea>
+        <input
+          class="answer-text"
+          type="text"
+          placeholder="Enter the pronunciation including tone (e.g., han4)"
+        />
+        <div class="button-container">
+          <button class="check-ans-btn">Check Answer</button>
+          <button class="undo-btn">Undo</button>
         </div>
       </div>
-    </div>
-    <div class="modal-window modal-settings">
-      <div class="modal-content">
-        <span class="close-settings-btn close-modal-btn">&times;</span>
-        <div class="settings-modal-text">
-          <h1>Settings</h1>
+      <div class="modal-window modal-choose-list">
+        <div class="modal-content">
+          <span class="close-modal-btn close-list-modal">&times;</span>
+          <div class="choose-list-text">
+            <h1>Create a New Study List</h1>
+            <label for="list-name"
+              >Enter your name: <input id="list-name" type="text"
+            /></label>
+            <label
+              >Select a range:
+              <input class="lower-range" width="5" type="number" min="1" /> to
+              <input class="upper-range" type="number" min="50" max="6000" />
+            </label>
+            <!-- TODO: Add advanced settings later -->
+            <button class="submit-list-btn">Create Study list</button>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="modal-window modal-settings">
+        <div class="modal-content">
+          <span class="close-settings-btn close-modal-btn">&times;</span>
+          <div class="settings-modal-text">
+            <h1>Settings</h1>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
   <script src="script.js"></script>

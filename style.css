@@ -13,7 +13,7 @@ nav {
   display: flex;
   align-items: center;
   height: 60px;
-  padding: 0 20px;
+  padding: 20px 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -262,4 +262,26 @@ button:hover {
   display: inline-block;
   border-radius: 5px;
   margin-left: 40%;
+}
+
+.intro-text {
+  position: absolute;
+  top: 100px;
+  right: 30%;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.intro-title {
+  margin-bottom: -10px;
+}
+
+.intro-paragraph {
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
 }

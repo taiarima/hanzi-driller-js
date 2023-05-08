@@ -16,6 +16,7 @@ const submitListBtn = document.querySelector(".submit-list-btn");
 const listLowerRange = document.querySelector(".lower-range");
 const listUpperRange = document.querySelector(".upper-range");
 const listUserName = document.getElementById(".list-name");
+const introText = document.querySelector(".intro-text");
 
 // Plan
 // 1. Have users choose whether they want simplified or traditional
@@ -55,14 +56,18 @@ nextBtn.addEventListener("click", function () {
   // empty function for now
 });
 
-// Coding Modal window
+// Coding Modal windows
 // Get the modal
 const modalChooseList = document.querySelector(".modal-choose-list");
 const modalSettings = document.querySelector(".modal-settings");
+const modalAbout = document.querySelector(".modal-about");
+const modalHelp = document.querySelector(".modal-help");
 
 // Get the <span> element that closes the modal
 const closeListModal = document.querySelector(".close-list-modal");
 const closeSettingsModal = document.querySelector(".close-settings-btn");
+const closeAboutModal = document.querySelector(".close-about-btn");
+const closeHelpModal = document.querySelector(".close-help-btn");
 
 // When the user clicks the link, open the modal
 chooseListLink.onclick = function () {
@@ -71,6 +76,14 @@ chooseListLink.onclick = function () {
 
 settingsLink.onclick = function () {
   modalSettings.style.display = "block";
+};
+
+aboutLink.onclick = function () {
+  modalAbout.style.display = "block";
+};
+
+helpLink.onclick = function () {
+  modalHelp.style.display = "block";
 };
 
 // When the user clicks on <span> (x), close the modal
@@ -82,14 +95,31 @@ closeSettingsModal.onclick = function () {
   modalSettings.style.display = "none";
 };
 
+closeAboutModal.onclick = function () {
+  modalAbout.style.display = "none";
+};
+
+closeHelpModal.onclick = function () {
+  modalHelp.style.display = "none";
+};
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modalChooseList || event.target == modalSettings) {
+  if (
+    event.target == modalChooseList ||
+    event.target == modalSettings ||
+    event.target == modalAbout ||
+    event.target == modalHelp
+  ) {
     modalChooseList.style.display = "none";
     modalSettings.style.display = "none";
+    modalAbout.style.display = "none";
+    modalHelp.style.display = "none";
   }
 };
 
 submitListBtn.onclick = function () {
-  // take values
+  appContainer.classList.remove("hidden");
+  introText.classList.add("hidden");
+  modalChooseList.style.display = "none";
 };
